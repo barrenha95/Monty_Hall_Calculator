@@ -5,37 +5,40 @@ from random import sample # For sampling results
 import numpy # To do the if_else statement
 
 # Creating a list with the number of possible options
-list_of_doors = [1, 2, 3]
-print(list_of_doors)
+#list_of_doors = [1, 2, 3]
+#print(list_of_doors)
 
 # Testing the sample function
-print(sample(list_of_doors,1))
+#print(sample(list_of_doors,1))
 
 # Assignment of the prize
-prize = int(sample(list_of_doors,1)[0])
-print(prize)
+#prize = int(sample(list_of_doors,1)[0])
+#print(prize)
 
 # Choose the door
-door_choosen = int(sample(list_of_doors,1)[0])
-print(door_choosen)
+#door_choosen = int(sample(list_of_doors,1)[0])
+#print(door_choosen)
 
 # Open one of the doors you don't choose that don't have the prize
-doors_to_remove = [door_choosen, prize]
-list_of_doors = list(set(list_of_doors) - set(doors_to_remove))
-print(list_of_doors)
+#doors_to_remove = [door_choosen, prize]
+#list_of_doors = list(set(list_of_doors) - set(doors_to_remove))
+#print(list_of_doors)
 
 # Checking if is better to change the door or not
-result = numpy.where(door_choosen == prize, "Dont_change", "Change")
-print(result)
+#result = numpy.where(door_choosen == prize, "Dont_change", "Change")
+#print(result)
 
 ## Now let's create a function to help us making this test multiple times
 def MontyHall():
+
+    global result, prize, door_choosen
+
     # Creating a list with the number of possible options
     list_of_doors = [1, 2, 3]
     print(list_of_doors)
 
     # Testing the sample function
-    print(sample(list_of_doors,1))
+    #print(sample(list_of_doors,1))
 
     # Assignment of the prize
     prize = int(sample(list_of_doors,1)[0])
